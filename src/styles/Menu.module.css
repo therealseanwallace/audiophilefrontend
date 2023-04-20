@@ -1,0 +1,33 @@
+.container {
+  background: #101010;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.menucontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0 10px;
+}
+
+.button {
+  background-color: #101010;
+  border: 0px;
+}
+
+.divider {
+  height: 2px;
+  width: 100%;
+  background-color: #fafafa;
+}

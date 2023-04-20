@@ -1,0 +1,47 @@
+pages/routes:
+
+/index.js
+
+/headphones/index.js
+/headphones/xx99markii
+/headphones/xx99marki
+/headphones/xx59
+/speakers/index.js
+/speakers/zx9
+/speakers/zx7
+/earphones/index.js
+/earphones/yx1
+/checkout
+
+We'll use getStaticProps to pull in the data from the JSON file and build the routes
+
+
+Components:
+
+
+  Menu
+
+  Hero
+
+  CategoryPictureLinks
+
+  ProductShowcase i.e. zx9 etc
+
+  
+
+  BottomCopySection
+
+  Footer
+
+  CategoryPage
+    DetailedProductShowcase
+
+  Product Page
+    ProductPageUpper
+    MayAlsoLike
+
+  CartModal
+
+  CheckoutForm
+
+  CheckoutSummary
