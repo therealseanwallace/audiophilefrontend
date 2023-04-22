@@ -2,7 +2,7 @@
   background-color: #d87d4a;
   border-color: #d87d4a;
   border: 0;
-  color: #f1f1f1;
+  color: var(--lightGrey);
   width: 162px;
   height: 48px;
   font-size: 0.8125rem;

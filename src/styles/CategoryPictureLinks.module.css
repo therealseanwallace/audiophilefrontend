@@ -1,0 +1,50 @@
+.name {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.07px;
+  margin-bottom: 7px;
+  
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 0 24px;
+
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background: var(--lightGrey);
+  width: 100%;
+  color: #000000;
+  margin-bottom: 72px;
+  border-radius: 8px 8px 0 0;
+}
+
+.shop {
+  font-size: 13px;
+  opacity: 50%;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.shopcontainer {
+  display: flex;
+  margin-left: 13px;
+}
+.img {
+  margin-top: -50px;
+}
+
+.arrow {
+  margin-top: 4.5px;
+  margin-left: 13px;
+}

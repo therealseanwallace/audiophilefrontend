@@ -1,31 +1,26 @@
 .container {
   background: #101010;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   width: 100%;
   height: 90px;
+
 }
 
-.menucontainer {
-  display: flex;
-  order: -1;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-}
+
+
 
 .link {
-  color: #ffffff;
+  color: var(--white);
   text-decoration: none;
   font-size: 1.2rem;
   padding: 0 10px;
 }
 
 .button {
-  background-color: #101010;
+  background-color: var(--lightBlack);
   border: 0px;
   margin-right: 24px;
 }
@@ -41,8 +36,47 @@
   justify-content: flex-end;
 }
 
+.textlinks {
+  display: none;
+  flex: 1 1 30%;
+  gap: 34px;
+}
+
+.navlink {
+  color: var(--lightGrey);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.navlink:hover {
+
+}
+
 @media screen and (min-width:601px) {
   .menuspacer {
-    flex: 0 0 115px;
+    flex: 0 0 88px;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media screen and (min-width:1280px) {
+  
+
+  .burgercontainer {
+    display: none;
+  }
+
+  .textlinks {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logocontainer {
+    flex: 1 1 30%;
   }
 }

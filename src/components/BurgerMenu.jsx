@@ -57,9 +57,7 @@ const styles = {
   },
 };
 
-const BurgerMenu = (props) => {
-  console.log("styles is", styles);
-  console.log("props", props);
+const BurgerMenu = () => {
   return (
     <Menu styles={styles}>
       <li>Home</li>

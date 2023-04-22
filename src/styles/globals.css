@@ -46,6 +46,16 @@ h6 {
 
 /* DEFINE CUSTOM COLORS */
 
+:root {
+  --darkOrange: #d87d4a;
+  --lightOrange: #fbaf85;
+  --lightBlack: #101010;
+  --darkBlack: #000000;
+  --lightGrey: #f1f1f1;
+  --lighterGrey: #fafafa;
+  --white: #ffffff;
+  
+}
 /* DEFINE FONTS */
 
 body {

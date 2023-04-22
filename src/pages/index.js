@@ -4,14 +4,18 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Menu from "@/components/Menu";
 import Hero from "@/components/Hero";
+import CategoryPictureLinks from "@/components/CategoryPictureLinks";
+import data from "@/data/data.json";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  console.log('data is', data);
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Audiophile</title>
         <meta name="description" content="Audiophile" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -21,7 +25,7 @@ export default function Home() {
         <Hero />
       </header>
       <main className={styles.main}>
-        
+        <CategoryPictureLinks data={data}/>
       </main>
     </>
   );
