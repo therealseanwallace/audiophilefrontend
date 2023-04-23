@@ -48,3 +48,14 @@
   margin-top: 4.5px;
   margin-left: 13px;
 }
+
+@media screen and (min-width: 767px) {
+  .section {
+    flex-direction: row;
+    margin-top: 132px;
+  }
+  
+  .link {
+    height: 165px;
+  }
+}

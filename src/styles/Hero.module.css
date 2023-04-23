@@ -4,11 +4,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--bgBlack);
   background: url("../assets/home/mobile/image-header.jpg") no-repeat center center/cover;
-  background-position: center -20px;
-  background-size: 100%;
-  padding-top: 188px;
-  margin-bottom: 72px;
+  background-position: center -140px;
+  background-size: 110%;
+  padding-top: 66px;
+
 }
 
 .new {
@@ -23,7 +24,7 @@
   text-align: center;
   line-height: 58px;
   letter-spacing: 2px;
-  margin-top: 24px;
+  margin-top: 12px;
 }
 
 .description {
@@ -37,4 +38,100 @@
 
 .largespacer {
   height: 112px;
+}
+
+@media screen and (min-width: 380px) {
+  .container {
+    margin-bottom: 120px;
+  }
+ 
+}
+
+@media screen and (min-width: 445px) {
+  .container {
+    background: url("../assets/home/tablet/image-header.jpg") no-repeat center center/cover;
+    background-position: center -24px;
+    background-size: 110%;
+    padding-top: 66px;
+    margin-bottom: 72px;
+  }
+  
+  .description {
+    padding: 0 64px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .container {
+    background-position: center -114px;
+  }
+  
+  .description {
+    padding: 0 30%;
+  }
+
+  .headline {
+    padding: 0 30%;
+  }
+  
+}
+
+@media screen and (min-width: 750px) {
+  .container {
+    background-position: center -130px;
+    background-size: 100% ;
+    padding-top: 80px;
+  }
+  
+  .description {
+    padding: 0 27%;
+  }
+
+  .headline {
+    padding: 0 30%;
+  }
+  
+}
+
+@media screen and (min-width: 816px) {
+  .container {
+    background: url("../assets/home/desktop/image-hero.jpg") no-repeat center center/cover;
+    align-items: flex-start;
+    padding: 170px 50% 0 10%;
+    
+  }
+
+  .container > * {
+    text-align: left;
+  }
+  
+  .headline, .description {
+    padding: 0;
+
+  }
+
+
+
+}
+
+@media screen and (min-width: 1340px) {
+  .container {
+    background-position: center -130px;
+    padding-right: 66%;
+  }
+
+
+
+}
+
+@media screen and (min-width: 1544px) {
+  .container {
+    background-position: center -130px;
+    padding-right: 66%;
+    padding-top: 280px;
+    height: 1000px;
+  }
+
+
+
 }
