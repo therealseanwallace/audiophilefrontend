@@ -1,9 +1,9 @@
 import Image from "next/image";
 import styles from "@/styles/CategoryPictureLinks.module.css";
 import cats from "../data/catPictureLinks.js";
-import { uuid } from "uuidv4";
+import { v4 as uuid } from "uuid";
 import Link from "next/link";
-import arrowRight from "@/assets/shared/desktop/icon-arrow-right.svg";
+import arrowRight from "/public/assets/shared/desktop/icon-arrow-right.svg";
 
 const CategoryPictureLinks = () => {
   return (

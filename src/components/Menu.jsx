@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import cartIcon from "@/assets/shared/desktop/icon-cart.svg";
-import logo from "@/assets/shared/desktop/logo.svg";
+import cartIcon from "/public/assets/shared/desktop/icon-cart.svg";
+import logo from "/public/assets/shared/desktop/logo.svg";
 import styles from "@/styles/Menu.module.css";
 import BurgerMenu from "./BurgerMenu";
 import cats from "@/data/catPictureLinks.js";
-import { uuid } from "uuidv4";
+import { v4 as uuid } from "uuid";
 
 const Menu = () => {
   const textLinks = cats.map((cat) => {

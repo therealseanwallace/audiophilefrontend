@@ -3,7 +3,7 @@ import { slide as Menu } from "react-burger-menu";
 
 const styles = {
   bmBurgerButton: {
-    position: "fixed",
+    position: "absolute",
     width: "16px",
     height: "15px",
     left: "36px",

@@ -5,6 +5,8 @@ import styles from "@/styles/Home.module.css";
 import Menu from "@/components/Menu";
 import Hero from "@/components/Hero";
 import CategoryPictureLinks from "@/components/CategoryPictureLinks";
+import ProductShowcase from "@/components/ProductShowcase";
+import BottomCopySection from "@/components/BottomCopySection";
 import data from "@/data/data.json";
 
 
@@ -26,6 +28,8 @@ export default function Home() {
       </header>
       <main className={styles.main}>
         <CategoryPictureLinks data={data}/>
+        <ProductShowcase />
+        <BottomCopySection />
       </main>
     </>
   );
