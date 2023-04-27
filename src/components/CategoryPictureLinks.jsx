@@ -14,8 +14,6 @@ const CategoryPictureLinks = () => {
             <Image
               src={cat.img}
               alt={cat.name}
-              width={cat.width}
-              height={cat.height}
               className={styles.img}
             />
             <p className={styles.name}>{cat.name}</p>

@@ -1,0 +1,81 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 120px;
+}
+
+.imagecontainer {
+  background: url("/assets/shared/mobile/image-best-gear.jpg") no-repeat;
+  background-position: center;
+  border-radius: 8px;
+  background-size: cover;
+  height: 300px;
+}
+
+.title {
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 1vw;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.title > span {
+  color: var(--darkOrange);
+}
+
+.text {
+  font-weight: 500;
+  line-height: 25px;
+  font-size: 15px;
+  text-align: center;
+  color: var(--lightBlack);
+  opacity: 0.6;
+}
+
+@media only screen and (min-width: 767px) {
+  .imagecontainer {
+    background: url("/assets/shared/tablet/image-best-gear.jpg") no-repeat;
+    background-position: center;
+    border-radius: 8px;
+    background-size: cover;
+    height: 300px;
+  }
+
+  .title {
+    padding: 0 8vw;
+    font-size: 40px;
+    margin-top: 24px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .section {
+    flex-direction: row-reverse;
+  }
+
+  .imagecontainer {
+    flex: 1 1 50%;
+    height: 588px;
+  }
+
+  .textcontainer {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .textcontainer > * {
+    text-align: left;
+    padding: 0 8vw 0 0;
+  }
+
+  .title {
+    padding: 0 12vw 0 0;
+  }
+}

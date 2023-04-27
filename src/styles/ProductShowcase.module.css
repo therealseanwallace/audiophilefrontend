@@ -174,9 +174,9 @@
   .section1 {
     flex-direction: row;
     background-position: left;
-    background-position-x: -193px;
+    background-position-x: -267px;
     background-position-y: 80px;
-    background-size: 71%;
+    background-size: 100%;
     
   }
 
@@ -212,6 +212,12 @@
     letter-spacing: 2px;
     line-height: 25px;
     letter-spacing: 0;
+  }
+
+  .section2 {
+    background: url("/assets/home/tablet/image-speaker-zx7.jpg") no-repeat;
+    background-size: 100%;
+    background-position-y: -219px;
   }
 }
 

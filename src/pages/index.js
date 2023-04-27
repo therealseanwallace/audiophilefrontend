@@ -8,12 +8,12 @@ import CategoryPictureLinks from "@/components/CategoryPictureLinks";
 import ProductShowcase from "@/components/ProductShowcase";
 import BottomCopySection from "@/components/BottomCopySection";
 import data from "@/data/data.json";
+import Footer from "@/components/Footer";
 
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  console.log('data is', data);
   return (
     <>
       <Head>
@@ -31,6 +31,7 @@ export default function Home() {
         <ProductShowcase />
         <BottomCopySection />
       </main>
+      <Footer />
     </>
   );
 }

@@ -4,7 +4,6 @@
   font-weight: bold;
   letter-spacing: 1.07px;
   margin-bottom: 7px;
-  
 }
 
 .section {
@@ -40,6 +39,13 @@
 }
 .img {
   margin-top: -50px;
+  width:124px;
+  height: 124px;
+}
+
+.img:last-of-type {
+  width: 148px;
+  height: 148px;
 }
 
 .arrow {
@@ -52,8 +58,25 @@
     flex-direction: row;
     margin-top: 132px;
   }
-  
+
   .link {
     height: 165px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .link {
+    height: 204px;
+  }
+
+  .img {
+    margin-top: -50px;
+    width:148px;
+    height: 148px;
+  }
+  
+  .img:last-of-type {
+    width: 158px;
+    height: 158px;
   }
 }
