@@ -22,7 +22,6 @@
   min-width: 350px;
   height: 352px;
   border-radius: 4px;
-
 }
 
 .newproduct {
@@ -62,47 +61,84 @@
     margin-top: 16px;
     padding: 0 40vw;
     font-size: 40px;
-    text-align: left;
   }
 
   .description {
-    padding: 0 10vw;
+    padding: 0 21vw;
+  }
+
+  .imgcontainerleft {
+    background-color: var(--lightGrey);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .imgcontainerright {
+    background-color: var(--lightGrey);
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .product {
-    flex-direction: row;
-  }
-
-  .product:nth-of-type(even) {
-    flex-direction: row-reverse;
-  }
-
-  .product:nth-of-type(even) > .contentcontainer {
-    padding-left: 7vw;
+    display: grid;
+    grid-template-columns: [left] 50% [right] 50%;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
   }
 
   .img {
     height: 560px;
   }
 
-  .imgcontainer {
-    width: 50%;
+  .imgcontainerleft {
     background-color: var(--white);
+    grid-column-start: left;
+    grid-column-end: left;
+    justify-content: flex-end;
   }
 
-  .contentcontainer {
-    width: 50%;
+  .imgcontainerright {
+    background-color: var(--white);
+    grid-column-start: right;
+    grid-column-end: right;
+    justify-content: flex-start;
+  }
+
+  .contentcontainerright {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     padding-left: 4vw;
+    grid-column-start: right;
+    grid-column-end: right;
   }
 
- 
+  .contentcontainerright > .name {
+    text-align: left;
+  }
+  .contentcontainerleft {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0;
+    grid-column-start: left;
+    grid-column-end: left;
+    padding-right: 8vw;
+  }
 
+  .contentcontainerleft > h2, .contentcontainerleft > p {
+    padding: 0;
+    text-align: right;
+    
+  }
   .name {
     padding: 0;
     padding-right: 40vw;

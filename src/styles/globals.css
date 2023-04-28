@@ -68,3 +68,10 @@ body {
 main {
   padding: 0 24px;
 }
+
+@media screen and (min-width: 1280px) {
+  main {
+    padding: 0 165px;
+  }
+}
+  
