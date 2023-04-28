@@ -4,6 +4,10 @@ import earphones from "/public/assets/shared/desktop/image-category-thumbnail-ea
 
 const cats = [
   {
+    name: "home",
+    slug: "/",
+  },
+  {
     name: "headphones",
     img: headphones,
     width: "124",

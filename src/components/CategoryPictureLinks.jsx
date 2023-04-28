@@ -8,7 +8,8 @@ import arrowRight from "/public/assets/shared/desktop/icon-arrow-right.svg";
 const CategoryPictureLinks = () => {
   return (
     <section className={styles.section}>
-      {cats.map((cat) => {
+      {cats.map((cat, index) => {
+        if (index === 0) return;
         return (
           <Link key={uuid()} href={cat.slug} className={styles.link}>
             <Image

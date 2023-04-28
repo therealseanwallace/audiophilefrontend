@@ -50,7 +50,10 @@ const styles = {
   },
   bmItem: {
     display: "inline-block",
-    color: "#fafafa"
+    color: "#fafafa",
+    textDecoration: "none",
+    fontWeight: "bold",
+    fontSize: "1.5rem",
   },
   bmOverlay: {
     background: "rgba(0, 0, 0, 0.3)",
@@ -60,10 +63,10 @@ const styles = {
 const BurgerMenu = () => {
   return (
     <Menu styles={styles}>
-      <li>Home</li>
-      <li>Headphones</li>
-      <li>Speakers</li>
-      <li>Earphones</li>
+      <Link href="/">Home</Link>
+      <Link href="/category/headphones">Headphones</Link>
+      <Link href="/category/speakers">Speakers</Link>
+      <Link href="/category/earphones">Earphones</Link>
     </Menu>
   );
 };
