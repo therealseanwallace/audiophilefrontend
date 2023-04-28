@@ -1,15 +1,22 @@
-.container {
-  background: #101010;
+.containerlight {
+  background: var(--bgBlack);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   width: 100%;
   height: 90px;
-
 }
 
-
+.containerdark {
+  background: var(--darkBlack);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+}
 
 
 .link {

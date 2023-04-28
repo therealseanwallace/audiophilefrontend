@@ -1,0 +1,12 @@
+.h1 {
+  background-color: var(--darkBlack);
+  color: var(--white);
+  text-transform: uppercase;
+  height: 102px;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2px;
+  margin-bottom: 64px;
+}
