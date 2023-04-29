@@ -7,16 +7,14 @@ import ghLogo from "/public/assets/shared/desktop/github-mark.png";
 import linkedInLogo from "/public/assets/shared/desktop/LI-In-Bug.png";
 
 const Footer = () => {
-  const textLinks = cats.map((cat) => {
-    return (
+  const textLinks = cats.map((cat) => (
       <Link key={uuid()} href={cat.slug} className={styles.navlink}>
         <p className={styles.textlink}>{cat.name}</p>
       </Link>
-    );
-  });
+    ));
   return (
     <footer className={styles.footer}>
-      <div className={styles.spacer}></div>
+      <div className={styles.spacer} />
       <Image
         src="/assets/shared/desktop/logo.svg"
         alt="logo"
@@ -25,16 +23,16 @@ const Footer = () => {
         className={styles.logo}
       />
       <nav className={styles.nav}>
-        <Link key={uuid()} href={"#home"} className={styles.navlink}>
+        <Link key={uuid()} href="#home" className={styles.navlink}>
           <p className={styles.textlink}>Home</p>
         </Link>
         {textLinks}
       </nav>
       <p className={styles.footercopy}>
-        Audiophile is an all in one stop to fulfill your audio needs. We're a
+        Audiophile is an all in one stop to fulfill your audio needs. We&apos;re a
         small team of music lovers and sound specialists who are devoted to
         helping you get the most out of personal audio. Come and visit our demo
-        facility - we’re open 7 days a week.
+        facility - we&apos;re open 7 days a week.
       </p>
       <p className={styles.copyright}>
         Design Copyright Frontend Mentor 2021.

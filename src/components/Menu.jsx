@@ -3,19 +3,20 @@ import Image from "next/image";
 import Link from "next/link";
 import cartIcon from "/public/assets/shared/desktop/icon-cart.svg";
 import logo from "/public/assets/shared/desktop/logo.svg";
+import { v4 as uuid } from "uuid";
+import PropTypes from 'prop-types';
 import styles from "@/styles/Menu.module.css";
 import BurgerMenu from "./BurgerMenu";
 import cats from "@/data/catPictureLinks.js";
-import { v4 as uuid } from "uuid";
+
+
 
 const Menu = ( { page } ) => {
-  const textLinks = cats.map((cat) => {
-    return <Link key={uuid()} href={cat.slug} className={styles.navlink}>
+  const textLinks = cats.map((cat) => <Link key={uuid()} href={cat.slug} className={styles.navlink}>
       <p className={styles.textlink}>{cat.name}</p>
-    </Link>
-  });
+    </Link>);
 
-  if (page == "home") {
+  if (page === "home") {
     return (
       <nav className={styles.containerlight}>
         <div className={styles.menuspacer} />
@@ -27,7 +28,7 @@ const Menu = ( { page } ) => {
         </div>
         <div className={styles.textlinks}>{textLinks}</div>
         <div className={styles.buttoncontainer}>
-          <button className={styles.button}>
+          <button className={styles.button} type="button">
             <Image src={cartIcon} alt="cart" width={23} height={20} />
           </button>
         </div>
@@ -45,7 +46,7 @@ const Menu = ( { page } ) => {
       </div>
       <div className={styles.textlinks}>{textLinks}</div>
       <div className={styles.buttoncontainer}>
-        <button className={styles.button}>
+        <button className={styles.button} type="button">
           <Image src={cartIcon} alt="cart" width={23} height={20} />
         </button>
       </div>
@@ -54,3 +55,7 @@ const Menu = ( { page } ) => {
 };
 
 export default Menu;
+
+Menu.propTypes = {
+  page: PropTypes.string.isRequired,
+};

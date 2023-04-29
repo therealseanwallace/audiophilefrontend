@@ -1,11 +1,12 @@
 import Link from "next/link";
+import PropTypes from 'prop-types';
 import styles from "@/styles/LinkButton.module.css";
 
 const Button = ({ content, url, color }) => {
-  if (color === "orange" || color === undefined) {
+  if (color === "orange") {
     return (
       <Link href={url}>
-        <button className={styles.linkbutton}>
+        <button className={styles.linkbutton} type="button">
           <p>{content}</p>
         </button>
       </Link>
@@ -14,7 +15,7 @@ const Button = ({ content, url, color }) => {
   if (color === "black") {
     return (
       <Link href={url}>
-        <button className={styles.black}>
+        <button className={styles.black} type="button">
           <p>{content}</p>
         </button>
       </Link>
@@ -24,7 +25,7 @@ const Button = ({ content, url, color }) => {
 
     return (
       <Link href={url}>
-        <button className={styles.transparent}>
+        <button className={styles.transparent} type="button">
           <p>{content}</p>
         </button>
       </Link>
@@ -33,3 +34,14 @@ const Button = ({ content, url, color }) => {
 };
 
 export default Button;
+
+Button.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  content: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  color: PropTypes.string
+};
+
+Button.defaultProps = {
+  color: "orange"
+};

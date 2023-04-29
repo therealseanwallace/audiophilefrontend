@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Menu from "@/components/Menu";
 import Hero from "@/components/Hero";
@@ -8,9 +7,6 @@ import ProductShowcase from "@/components/ProductShowcase";
 import BottomCopySection from "@/components/BottomCopySection";
 import data from "@/data/data.json";
 import Footer from "@/components/Footer";
-
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (

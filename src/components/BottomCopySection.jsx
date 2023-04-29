@@ -1,10 +1,6 @@
 import styles from "@/styles/BottomCopySection.module.css";
-import Image from "next/image";
 
-
-const BottomCopySection = () => {
-
-  return (
+const BottomCopySection = () => (
     <section className={styles.section}>
       <div className={styles.imagecontainer} />
       <div className={styles.textcontainer}>
@@ -14,6 +10,5 @@ const BottomCopySection = () => {
 
     </section>
   )
-}
 
 export default BottomCopySection

@@ -1,16 +1,8 @@
 import xxMkIPreviewDesktop from "/public/assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview-desktop.jpg";
 import xxMkIIPreviewDesktop from "/public/assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview-desktop.jpg";
 import xx59PreviewDesktop from "/public/assets/product-xx59-headphones/desktop/image-category-page-preview.jpg";
-import zx9PreviewMobile from "/public/assets/product-zx9-speaker/mobile/image-category-page-preview.jpg";
-import zx9PreviewTablet from "/public/assets/product-zx9-speaker/tablet/image-category-page-preview.jpg";
 import zx9PreviewDesktop from "/public/assets/product-zx9-speaker/desktop/image-category-page-preview.jpg";
-import zx7PreviewMobile from "/public/assets/product-zx7-speaker/mobile/image-category-page-preview.jpg";
-import zx7PreviewTablet from "/public/assets/product-zx7-speaker/tablet/image-category-page-preview.jpg";
 import zx7PreviewDesktop from "/public/assets/product-zx7-speaker/desktop/image-category-page-preview.jpg";
-import yx1PreviewMobile from "/public/assets/product-yx1-earphones/mobile/image-category-page-preview.jpg";
-import yx1PreviewTablet from "/public/assets/product-yx1-earphones/tablet/image-category-page-preview.jpg";
-import yx1PreviewDesktop from "/public/assets/product-yx1-earphones/desktop/image-category-page-preview.jpg";
-
 
 const catPages = [
   {
@@ -39,7 +31,6 @@ const catPages = [
         isNew: false,
         preview: xx59PreviewDesktop,
         slug: "xx59-headphones",
-
       },
     ],
   },
@@ -61,7 +52,6 @@ const catPages = [
         isNew: false,
         preview: zx7PreviewDesktop,
         slug: "zx7-speaker",
-
       },
     ],
   },
@@ -74,7 +64,6 @@ const catPages = [
           "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
         isNew: true,
         slug: "yx1-earphones",
-
       },
     ],
   },

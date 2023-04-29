@@ -60,8 +60,7 @@ const styles = {
   },
 };
 
-const BurgerMenu = () => {
-  return (
+const BurgerMenu = () => (
     <Menu styles={styles}>
       <Link href="/">Home</Link>
       <Link href="/category/headphones">Headphones</Link>
@@ -69,6 +68,5 @@ const BurgerMenu = () => {
       <Link href="/category/earphones">Earphones</Link>
     </Menu>
   );
-};
 
 export default BurgerMenu;

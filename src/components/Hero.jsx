@@ -1,8 +1,7 @@
 import styles from "@/styles/Hero.module.css";
 import LinkButton from "@/components/LinkButton";
 
-const Hero = () => {
-  return (
+const Hero = () => (
     <section className={styles.container}>
       <p className={styles.new}>NEW PRODUCT</p>
       <h1 className={styles.headline}>XX99 MARK II HEADPHONES</h1>
@@ -11,6 +10,5 @@ const Hero = () => {
       <div className={styles.largespacer} />
     </section>
   )
-}
 
 export default Hero

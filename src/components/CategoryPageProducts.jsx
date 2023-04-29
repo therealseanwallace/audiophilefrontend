@@ -1,9 +1,11 @@
-import styles from "@/styles/CategoryPageProducts.module.css";
 import { v4 as uuid } from "uuid";
 import Image from "next/image";
+import PropTypes from 'prop-types';
+import styles from "@/styles/CategoryPageProducts.module.css";
 import LinkButton from "@/components/LinkButton";
 
-const CategoryPageProducts = ({ products, slug }) => {
+
+const CategoryPageProducts = ({ products }) => {
   const productsJSX = products.map((product, index) => {
     let isNew;
     if (product.isNew) isNew = <p className={styles.newproduct}>New Product</p>;
@@ -55,3 +57,8 @@ const CategoryPageProducts = ({ products, slug }) => {
 };
 
 export default CategoryPageProducts;
+
+CategoryPageProducts.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  products: PropTypes.arrayOf(PropTypes.object).isRequired,
+};

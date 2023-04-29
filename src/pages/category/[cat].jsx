@@ -1,5 +1,5 @@
-import catPages from "@/data/catPages";
 import Head from "next/head";
+import catPages from "@/data/catPages";
 import Menu from "@/components/Menu";
 import CategoryPictureLinks from "@/components/CategoryPictureLinks";
 import BottomCopySection from "@/components/BottomCopySection";
@@ -7,9 +7,7 @@ import CategoryPageProducts from "@/components/CategoryPageProducts";
 import styles from "@/styles/Category.module.css";
 import Footer from "@/components/Footer";
 
-const cat = ( { data } ) => {
-  console.log(data);
-  return (
+const cat = ( { data } ) => (
     <>
       <Head>
         <title>Audiophile</title>
@@ -30,16 +28,15 @@ const cat = ( { data } ) => {
 
     </>
   )
-}
 
 export default cat;
 
 
-export async function getStaticProps({ query, params }) {
+export async function getStaticProps({ params }) {
   let data;
-  catPages.forEach((cat) => {
-    if (cat.slug === params.cat) {
-      data = cat;
+  catPages.forEach((category) => {
+    if (category.slug === params.cat) {
+      data = category;
     }
   });
   return {
@@ -50,11 +47,9 @@ export async function getStaticProps({ query, params }) {
 }
 
 export async function getStaticPaths() {
-  const paths = catPages.map((cat) => {
-    return {
-      params: { cat: cat.slug },
-    }
-  })
+  const paths = catPages.map((category) => ({
+      params: { cat: category.slug },
+    }))
 
   return {
     paths,

@@ -5,8 +5,7 @@ import { v4 as uuid } from "uuid";
 import Link from "next/link";
 import arrowRight from "/public/assets/shared/desktop/icon-arrow-right.svg";
 
-const CategoryPictureLinks = () => {
-  return (
+const CategoryPictureLinks = () => (
     <section className={styles.section}>
       {cats.map((cat, index) => {
         if (index === 0) return;
@@ -33,6 +32,5 @@ const CategoryPictureLinks = () => {
       })}
     </section>
   );
-};
 
 export default CategoryPictureLinks;
