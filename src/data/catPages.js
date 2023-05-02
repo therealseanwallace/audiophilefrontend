@@ -3,6 +3,7 @@ import xxMkIIPreviewDesktop from "/public/assets/product-xx99-mark-two-headphone
 import xx59PreviewDesktop from "/public/assets/product-xx59-headphones/desktop/image-category-page-preview.jpg";
 import zx9PreviewDesktop from "/public/assets/product-zx9-speaker/desktop/image-category-page-preview.jpg";
 import zx7PreviewDesktop from "/public/assets/product-zx7-speaker/desktop/image-category-page-preview.jpg";
+import yx1PreviewDesktop from "/public/assets/product-yx1-earphones/desktop/image-category-page-preview.jpg";
 
 const catPages = [
   {
@@ -64,6 +65,7 @@ const catPages = [
           "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
         isNew: true,
         slug: "yx1-earphones",
+        preview: yx1PreviewDesktop,
       },
     ],
   },

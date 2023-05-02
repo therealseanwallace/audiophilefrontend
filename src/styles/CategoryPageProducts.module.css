@@ -150,3 +150,13 @@
     padding-right: 13vw;
   }
 }
+
+@media screen and (min-width: 1920px) {
+  .description {
+    padding-right: 21vw;
+  }
+
+  .contentcontainerleft > p {
+    padding-left: 21vw;
+  }
+}

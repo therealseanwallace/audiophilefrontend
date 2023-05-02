@@ -66,6 +66,7 @@
 @media only screen and (min-width: 600px) {
   .mainsection {
     display: flex;
+    margin-top: 4vw;
   }
 
   .productdetail {
@@ -95,5 +96,15 @@
   .intheboxcontainer {
     margin-top: 36px;
   }
+
+}
+
+@media only screen and (min-width: 1800px) {
+  .mainsection {
+    margin-top: 12vw;
+    margin-bottom: 12vw;
+  }
+
+  
 
 }
