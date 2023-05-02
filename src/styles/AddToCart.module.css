@@ -1,0 +1,21 @@
+.outercontainer {
+  display: flex;
+  gap: 16px;
+}
+
+.quantitycontainer {
+  display: flex;
+  justify-content: space-between;
+  height: 48px;
+  width: 120px;
+  align-items: center;
+  background-color: var(--lighterGrey);
+}
+
+.plusminus {
+  opacity: 25%;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 0;
+  background-color: transparent;
+}

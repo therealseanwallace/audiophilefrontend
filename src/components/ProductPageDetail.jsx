@@ -1,0 +1,69 @@
+/* eslint-disable react/prop-types */
+import Image from "next/image";
+import styles from "@/styles/ProductPageDetail.module.css";
+import AddToCart from "./AddToCart";
+
+const ProductPageDetail = ({ data }) => {
+  console.log("data is", data);
+  let newProduct;
+
+  const splitPrice = (price) => {
+    const priceToString = price.toString();
+    const strSplit = priceToString.split("");
+    if (strSplit.length > 3) {
+      strSplit.splice(1, 0, ",");
+
+      return strSplit.join("");
+    }
+    return price;
+  };
+
+  if (data.new)
+    newProduct = <div className={styles.newproduct}>New Product</div>;
+
+  const generateIntheBox = (includes) => {
+    const inTheBox = includes.map((item) => (
+      <div className={styles.intheboxitem}>
+        <p className={styles.intheboxquantity}>{item.quantity}x</p>
+        <p className={styles.description}>{item.item}</p>
+      </div>
+    ));
+    return inTheBox;
+  };
+  return (
+    <>
+      <section className={styles.mainsection}>
+        <div className={styles.outerimagecontainer}>
+          <div className={styles.mainimagecontainer}>
+            <Image
+              src={data.image.src}
+              alt={data.slug}
+              className={styles.mainimage}
+              fill="true"
+            />
+          </div>
+        </div>
+        <div className={styles.productdetail}>
+          {newProduct}
+          <h2 className={styles.h2}>{data.name}</h2>
+          <p className={styles.description}>{data.description}</p>
+          <p className={styles.price}>${splitPrice(data.price)}</p>
+          <AddToCart />
+        </div>
+      </section>
+      <section className={styles.featuressection}>
+        <div className={styles.features}>
+          <h2 className={styles.h2}>Features</h2>
+          <p className={styles.description}>{data.featuresP1}</p>
+          <p className={styles.description}>{data.featuresP2}</p>
+        </div>
+      </section>
+      <section className={styles.inthebox}>
+        <h2 className={styles.h2}>In the box</h2>
+        <div className={styles.intheboxcontainer}>{generateIntheBox(data.includes)}</div>
+      </section>
+    </>
+  );
+};
+
+export default ProductPageDetail;

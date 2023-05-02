@@ -14,7 +14,6 @@
   background: url("/assets/home/desktop/pattern-circles.svg"),
     var(--darkOrange);
   background-position: center;
-
   display: flex;
   flex-direction: column;
   align-items: center;
