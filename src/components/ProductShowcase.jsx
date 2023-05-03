@@ -4,9 +4,9 @@ import styles from "@/styles/ProductShowcase.module.css";
 import LinkButton from "@/components/LinkButton.jsx";
 
 const ProductShowcase = () => {
-  const firstURL = `/category/${data[0].cat}/product/${data[0].slug}`;
-  const secondURL = `/category/${data[1].cat}/product/${data[1].slug}`;
-  const thirdurl = `/category/${data[2].cat}/product/${data[2].slug}`;
+  const firstURL = `/product/${data[0].slug}`;
+  const secondURL = `product/${data[1].slug}`;
+  const thirdurl = `product/${data[2].slug}`;
   return (
     <section className={styles.container}>
       <div className={styles.section1}>
