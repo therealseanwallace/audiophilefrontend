@@ -2,21 +2,13 @@
 import Image from "next/image";
 import styles from "@/styles/ProductPageDetail.module.css";
 import AddToCart from "./AddToCart";
+import splitPrice from "@/helpers/splitPrice";
 
 const ProductPageDetail = ({ data }) => {
   console.log("data is", data);
   let newProduct;
 
-  const splitPrice = (price) => {
-    const priceToString = price.toString();
-    const strSplit = priceToString.split("");
-    if (strSplit.length > 3) {
-      strSplit.splice(1, 0, ",");
-
-      return strSplit.join("");
-    }
-    return price;
-  };
+  
 
   if (data.new)
     newProduct = <div className={styles.newproduct}>New Product</div>;
@@ -47,8 +39,8 @@ const ProductPageDetail = ({ data }) => {
           {newProduct}
           <h2 className={styles.h2}>{data.name}</h2>
           <p className={styles.description}>{data.description}</p>
-          <p className={styles.price}>${splitPrice(data.price)}</p>
-          <AddToCart />
+          <p className={styles.price}>$ {splitPrice(data.price)}</p>
+          <AddToCart slug={data.slug} source="prodpage" />
         </div>
       </section>
       <section className={styles.featuressection}>

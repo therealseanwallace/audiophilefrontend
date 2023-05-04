@@ -12,6 +12,16 @@ const Button = ({ content, url, color }) => {
       </Link>
     );
   }
+
+  if (color === "orangefullwidth") {
+    return (
+      <Link href={url}>
+        <button className={styles.orangefullwidth} type="button">
+          <p>{content}</p>
+        </button>
+      </Link>
+    );
+  }
   if (color === "black") {
     return (
       <Link href={url}>
