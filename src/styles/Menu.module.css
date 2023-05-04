@@ -18,7 +18,6 @@
   height: 90px;
 }
 
-
 .link {
   color: var(--white);
   text-decoration: none;
@@ -27,14 +26,13 @@
 }
 
 .button {
-  background-color: var(--lightBlack);
+  background-color: transparent;
   border: 0px;
   margin-right: 24px;
 }
 
 .menuspacer {
   flex: 1 1 30%;
-
 }
 
 .buttoncontainer {
@@ -57,8 +55,25 @@
   font-weight: bold;
 }
 
+.modal {
+  position: absolute;
+  background-color: var(--white);
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 114px;
+  text-align: center;
+  width: 90vw;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
 
-@media screen and (min-width:601px) {
+@media screen and (min-width: 601px) {
   .menuspacer {
     flex: 0 0 88px;
   }
@@ -68,9 +83,7 @@
   }
 }
 
-@media screen and (min-width:1280px) {
-  
-
+@media screen and (min-width: 1280px) {
   .burgercontainer {
     display: none;
   }

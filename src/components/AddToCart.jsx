@@ -1,18 +1,45 @@
 /* eslint-disable arrow-body-style */
+import { useContext, useState } from "react";
 import styles from "@/styles/AddToCart.module.css";
-import LinkButton from "@/components/LinkButton";
+import Button from "@/components/AddButton";
+import { CartContext } from "@/context/CartContext";
+import lookupItem from "@/helpers/lookupItem.js";
+import QuantityAdjuster from "./QuantityAdjuster";
 
-const AddToCart = (props) => {
+const AddToCart = ({ slug, source }) => {
+  const [quantityToAdd, setQuantityToAdd] = useState(1);
+  const { cartState, cartDispatch } = useContext(CartContext);
+  const item = lookupItem(slug);
+
+  const increaseQuantity = () => {
+    setQuantityToAdd(quantityToAdd + 1);
+    console.log('quantityToAdd', quantityToAdd);
+  };
+
+  const decreaseQuantity = () => {
+    if (quantityToAdd > 0) {
+      setQuantityToAdd(quantityToAdd - 1);
+    }
+  };
+
+  const addToCart = () => {
+    cartDispatch({
+      type: "ADD_TO_CART",
+      payload: item,
+      quantity: quantityToAdd,
+    });
+  };
   return (
     <div className={styles.outercontainer}>
-      <div className={styles.quantitycontainer}>
-        <button type="button" className={styles.plusminus}>-</button>
-        <p className={styles.price}>1</p>
-        <button type="button" className={styles.plusminus}>+</button>
-      </div>
-      <LinkButton url="/" content="Add to cart" color="orange"/>
+      <QuantityAdjuster
+        decreaseQuantity={decreaseQuantity}
+        increaseQuantity={increaseQuantity}
+        quantity={quantityToAdd}
+        source={source}
+      />
+      <Button content="Add to cart" color="orange" onClick={addToCart} />
     </div>
-  )
-}
+  );
+};
 
-export default AddToCart
+export default AddToCart;
