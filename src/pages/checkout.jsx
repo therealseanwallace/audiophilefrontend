@@ -294,8 +294,7 @@ const checkout = () => {
             </p>
             <div className={styles.modalitemoutercontainer}>
               <div className={styles.modalitemcontainer}>
-                {cartState.cart.map((product, index) => {
-                  return (
+                {cartState.cart.map((product, index) => (
                     <div key={uuid()} className={styles.modalitem}>
                       <div className={styles.modalimagecontainer}>
                         <Image
@@ -318,8 +317,7 @@ const checkout = () => {
                         </p>
                       </div>
                     </div>
-                  );
-                })}
+                  ))}
               </div>
             </div>
             {otherItems}

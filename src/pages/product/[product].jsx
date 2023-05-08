@@ -9,9 +9,7 @@ import ProductGallery from "@/components/ProductGallery";
 import MayAlsoLike from "@/components/MayAlsoLike";
 import Footer from "@/components/Footer";
 
-const product = ({ data }) => {
-  console.log("data is", data);
-  return (
+const product = ({ data }) => (
     <>
       <Head>
         <title>Audiophile</title>
@@ -32,7 +30,6 @@ const product = ({ data }) => {
       <Footer />
     </>
   );
-};
 
 export default product;
 
