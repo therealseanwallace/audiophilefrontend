@@ -1,8 +1,9 @@
 /* eslint-disable arrow-body-style */
+import PropTypes from 'prop-types';
 import { useContext, useState } from "react";
 import styles from "@/styles/AddToCart.module.css";
 import Button from "@/components/AddButton";
-import { CartContext } from "@/context/CartContext";
+import { CartContext } from "@/context/Context";
 import lookupItem from "@/helpers/lookupItem.js";
 import QuantityAdjuster from "./QuantityAdjuster";
 
@@ -13,7 +14,6 @@ const AddToCart = ({ slug, source }) => {
 
   const increaseQuantity = () => {
     setQuantityToAdd(quantityToAdd + 1);
-    console.log('quantityToAdd', quantityToAdd);
   };
 
   const decreaseQuantity = () => {
@@ -43,3 +43,8 @@ const AddToCart = ({ slug, source }) => {
 };
 
 export default AddToCart;
+
+AddToCart.propTypes = {
+  slug: PropTypes.string.isRequired,
+  source: PropTypes.string.isRequired,
+};

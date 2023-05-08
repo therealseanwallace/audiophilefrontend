@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { CartProvider } from "@/context/CartContext";
+import { CartProvider } from "@/context/Context";
 import "@/styles/globals.css";
 
 

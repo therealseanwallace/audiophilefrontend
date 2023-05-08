@@ -1,14 +1,16 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import Modal from "react-modal";
 import { v4 as uuid } from "uuid";
 import Image from "next/image";
+import PropTypes from 'prop-types';
 import LinkButton from "@/components/LinkButton";
-import { CartContext } from "@/context/CartContext";
+import { CartContext } from "@/context/Context";
 import styles from "@/styles/Cart.module.css";
 import splitPrice from "@/helpers/splitPrice.js";
 import QuantityAdjuster from "./QuantityAdjuster";
 import lookupItem from "@/helpers/lookupItem";
 import lookupShortName from "@/helpers/lookupShortName";
+
 
 const Cart = ({ isOpen, toggleModal }) => {
   const { cartState, cartDispatch } = useContext(CartContext);
@@ -24,7 +26,7 @@ const Cart = ({ isOpen, toggleModal }) => {
         content: {
           width: "327px",
           margin: "auto",
-          marginTop: "25vw",
+          marginTop: "100px",
           inset: "20px",
           display: "flex",
           flexDirection: "column",
@@ -33,6 +35,7 @@ const Cart = ({ isOpen, toggleModal }) => {
       }}
       isOpen={isOpen}
       onRequestClose={toggleModal}
+      className={styles.modal}
     >
       <div className={styles.topcontainer}>
         <h2 className={styles.h2}>Cart ({cartState.cart.length})</h2>
@@ -87,3 +90,8 @@ const Cart = ({ isOpen, toggleModal }) => {
 };
 
 export default Cart;
+
+Cart.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  toggleModal: PropTypes.func.isRequired,
+};

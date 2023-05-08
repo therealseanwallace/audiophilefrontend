@@ -6,7 +6,7 @@ import cartIcon from "/public/assets/shared/desktop/icon-cart.svg";
 import logo from "/public/assets/shared/desktop/logo.svg";
 import { v4 as uuid } from "uuid";
 import PropTypes from "prop-types";
-import { CartContext } from "@/context/CartContext";
+import { CartContext } from "@/context/Context";
 import styles from "@/styles/Menu.module.css";
 import BurgerMenu from "./BurgerMenu";
 import cats from "@/data/catPictureLinks.js";

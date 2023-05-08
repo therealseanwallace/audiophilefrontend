@@ -1,4 +1,6 @@
+import PropTypes from 'prop-types';
 import styles from "@/styles/QuantityAdjuster.module.css";
+
 
 const QuantityAdjuster = ({ decreaseQuantity, increaseQuantity, quantity, source }) => {
   if (source === "prodpage") {
@@ -46,3 +48,10 @@ const QuantityAdjuster = ({ decreaseQuantity, increaseQuantity, quantity, source
 }
 
 export default QuantityAdjuster;
+
+QuantityAdjuster.propTypes = {
+  decreaseQuantity: PropTypes.func.isRequired,
+  increaseQuantity: PropTypes.func.isRequired,
+  quantity: PropTypes.number.isRequired,
+  source: PropTypes.string.isRequired,
+};

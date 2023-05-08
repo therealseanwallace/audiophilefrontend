@@ -5,10 +5,7 @@ import AddToCart from "./AddToCart";
 import splitPrice from "@/helpers/splitPrice";
 
 const ProductPageDetail = ({ data }) => {
-  console.log("data is", data);
   let newProduct;
-
-  
 
   if (data.new)
     newProduct = <div className={styles.newproduct}>New Product</div>;
@@ -52,7 +49,9 @@ const ProductPageDetail = ({ data }) => {
       </section>
       <section className={styles.inthebox}>
         <h2 className={styles.h2}>In the box</h2>
-        <div className={styles.intheboxcontainer}>{generateIntheBox(data.includes)}</div>
+        <div className={styles.intheboxcontainer}>
+          {generateIntheBox(data.includes)}
+        </div>
       </section>
     </>
   );
