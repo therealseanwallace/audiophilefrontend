@@ -45,13 +45,11 @@ const Footer = () => {
       <div className={styles.linkcontainer}>
         <Link
           href="https://github.com/therealseanwallace/audiophilefrontend"
-          className={styles.githublink}
         >
           <Image src={ghLogo} alt="github" width={36} height={36} />
         </Link>
         <Link
-          href="https://github.com/therealseanwallace/audiophilefrontend"
-          className={styles.githublink}
+          href="https://www.linkedin.com/in/sean-wallace-338a53198/"
         >
           <Image src={linkedInLogo} alt="github" width={38} height={36} />
         </Link>
