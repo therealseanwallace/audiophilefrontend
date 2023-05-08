@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Modal from "react-modal";
 import { v4 as uuid } from "uuid";
 import Image from "next/image";
+import PropTypes from 'prop-types';
 import LinkButton from "@/components/LinkButton";
 import { CartContext } from "@/context/Context";
 import styles from "@/styles/Cart.module.css";
@@ -9,6 +10,7 @@ import splitPrice from "@/helpers/splitPrice.js";
 import QuantityAdjuster from "./QuantityAdjuster";
 import lookupItem from "@/helpers/lookupItem";
 import lookupShortName from "@/helpers/lookupShortName";
+
 
 const Cart = ({ isOpen, toggleModal }) => {
   const { cartState, cartDispatch } = useContext(CartContext);
@@ -88,3 +90,8 @@ const Cart = ({ isOpen, toggleModal }) => {
 };
 
 export default Cart;
+
+Cart.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  toggleModal: PropTypes.func.isRequired,
+};
