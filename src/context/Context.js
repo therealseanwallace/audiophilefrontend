@@ -7,7 +7,7 @@ const initialState = {
   total: 0,
 };
 
-const cartReducer = (state, action) => {
+const reducer = (state, action) => {
   switch (action.type) {
     case 'ADD_TO_CART': {
       if (state.cart.length > 0) {
@@ -62,7 +62,7 @@ const cartReducer = (state, action) => {
 };
 
 export const CartProvider = ({ children }) => {
-  const [cartState, cartDispatch] = useReducer(cartReducer, initialState);
+  const [cartState, cartDispatch] = useReducer(reducer, initialState);
   const value = useMemo(() => ({ cartState, cartDispatch }), [cartState, cartDispatch]);
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

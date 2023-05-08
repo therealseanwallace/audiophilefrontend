@@ -9,6 +9,15 @@ const Button = ({ content, url, color, onClick }) => {
       </button>
     );
   }
+
+  if (color === "orangefullwidth") {
+    return (
+      <button className={styles.orangefullwidth} type="button" onClick={onClick}>
+        <p>{content}</p>
+      </button>
+    );
+  }
+
   if (color === "black") {
     return (
       <button className={styles.black} type="button" onClick={onClick}>

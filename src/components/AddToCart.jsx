@@ -2,7 +2,7 @@
 import { useContext, useState } from "react";
 import styles from "@/styles/AddToCart.module.css";
 import Button from "@/components/AddButton";
-import { CartContext } from "@/context/CartContext";
+import { CartContext } from "@/context/Context";
 import lookupItem from "@/helpers/lookupItem.js";
 import QuantityAdjuster from "./QuantityAdjuster";
 

@@ -31,7 +31,7 @@
 }
 
 .adjustercontainer {
-  width: 30%;
+  flex: 0 1 40%;
   display: flex;
   justify-content: flex-end;
 }
@@ -59,6 +59,7 @@
 
 .itemcontainer {
   margin-bottom: 32px;
+  
 }
 
 .totalcontainer {
@@ -78,5 +79,20 @@
   font-weight: bold;
   font-size: 18px;
 }
+
+.namepricecontainer {
+  margin-right: 40px;
+  flex: 1 1 20vw;
+}
+
+/* .modal {
+  width: "327px";
+  margin: "auto";
+  margin-top: "100px";
+  inset: "20px";
+  display: "flex";
+  flex-direction: "column";
+  max-height: "1000px";
+} */
 
 

@@ -1,9 +1,9 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import Modal from "react-modal";
 import { v4 as uuid } from "uuid";
 import Image from "next/image";
 import LinkButton from "@/components/LinkButton";
-import { CartContext } from "@/context/CartContext";
+import { CartContext } from "@/context/Context";
 import styles from "@/styles/Cart.module.css";
 import splitPrice from "@/helpers/splitPrice.js";
 import QuantityAdjuster from "./QuantityAdjuster";
@@ -24,7 +24,7 @@ const Cart = ({ isOpen, toggleModal }) => {
         content: {
           width: "327px",
           margin: "auto",
-          marginTop: "25vw",
+          marginTop: "100px",
           inset: "20px",
           display: "flex",
           flexDirection: "column",
@@ -33,6 +33,7 @@ const Cart = ({ isOpen, toggleModal }) => {
       }}
       isOpen={isOpen}
       onRequestClose={toggleModal}
+      className={styles.modal}
     >
       <div className={styles.topcontainer}>
         <h2 className={styles.h2}>Cart ({cartState.cart.length})</h2>
