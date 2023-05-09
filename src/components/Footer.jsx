@@ -23,9 +23,6 @@ const Footer = () => {
         className={styles.logo}
       />
       <nav className={styles.nav}>
-        <Link key={uuid()} href="#home" className={styles.navlink}>
-          <p className={styles.textlink}>Home</p>
-        </Link>
         {textLinks}
       </nav>
       <p className={styles.footercopy}>
