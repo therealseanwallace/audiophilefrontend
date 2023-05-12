@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import Image from "next/image";
+import { v4 as uuid } from "uuid";
 import styles from "@/styles/ProductPageDetail.module.css";
 import AddToCart from "./AddToCart";
 import splitPrice from "@/helpers/splitPrice";
@@ -12,9 +13,9 @@ const ProductPageDetail = ({ data }) => {
 
   const generateIntheBox = (includes) => {
     const inTheBox = includes.map((item) => (
-      <div className={styles.intheboxitem}>
-        <p className={styles.intheboxquantity}>{item.quantity}x</p>
-        <p className={styles.description}>{item.item}</p>
+      <div className={styles.intheboxitem} key={uuid()}>
+        <p className={styles.intheboxquantity} key={uuid()}>{item.quantity}x</p>
+        <p className={styles.description} key={uuid()}>{item.item}</p>
       </div>
     ));
     return inTheBox;

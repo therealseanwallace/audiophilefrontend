@@ -8,6 +8,8 @@ import ProductPageDetail from "@/components/ProductPageDetail";
 import ProductGallery from "@/components/ProductGallery";
 import MayAlsoLike from "@/components/MayAlsoLike";
 import Footer from "@/components/Footer";
+import GoBackLink from "@/components/GoBackLink";
+
 
 const product = ({ data }) => (
     <>
@@ -19,17 +21,20 @@ const product = ({ data }) => (
       </Head>
       <header>
         <Menu page="nothome" />
+        <GoBackLink />
       </header>
       <main>
         <ProductPageDetail data={data} />
-        <ProductGallery images={data.gallery} name={data.name}/>
-        <MayAlsoLike others={data.others}/>
+        <ProductGallery images={data.gallery} name={data.name} />
+        <MayAlsoLike others={data.others} />
         <CategoryPictureLinks />
         <BottomCopySection />
       </main>
       <Footer />
     </>
   );
+
+  
 
 export default product;
 

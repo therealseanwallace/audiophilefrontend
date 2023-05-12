@@ -6,7 +6,9 @@ export const CartContext = createContext();
 const initialState = {
   cart: [],
   total: 0,
+  lastPageVisited: '/',
 };
+
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -55,6 +57,11 @@ const reducer = (state, action) => {
         ...state,
         cart: [],
         total: 0,
+      };
+    case 'SET_LAST_PAGE_VISITED':
+      return {
+        ...state,
+        lastPageVisited: action.payload,
       };
     default:
       return state;

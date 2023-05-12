@@ -36,9 +36,8 @@ const Button = ({ content, url, color, onClick }) => {
 export default Button;
 
 Button.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
   content: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  url: PropTypes.string,
   color: PropTypes.string,
   onClick: PropTypes.func.isRequired,
 };
