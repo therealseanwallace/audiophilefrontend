@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import Head from "next/head";
 import { v4 as uuid } from "uuid";
 import Image from "next/image";
@@ -13,11 +13,11 @@ import Button from "@/components/AddButton";
 import Menu from "@/components/Menu";
 import Footer from "@/components/Footer";
 import checkoutTick from "/public/assets/checkout/icon-order-confirmation.svg";
+import GoBackLink from "@/components/GoBackLink";
 
 const checkout = () => {
   const { cartState, cartDispatch } = useContext(CartContext);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [applyShipping, setApplyShipping] = useState(0);
   const [paymentMethod, setPaymentMethod] = useState("emoney");
   const toggleModal = () => {
     setModalIsOpen(!modalIsOpen);
@@ -84,6 +84,7 @@ const checkout = () => {
       </Head>
       <header>
         <Menu page="home" />
+        <GoBackLink referer={cartState.lastPageVisited} color="grey"/>
       </header>
       <main className={styles.main}>
         <div className={styles.page}>
@@ -295,29 +296,29 @@ const checkout = () => {
             <div className={styles.modalitemoutercontainer}>
               <div className={styles.modalitemcontainer}>
                 {cartState.cart.map((product, index) => (
-                    <div key={uuid()} className={styles.modalitem}>
-                      <div className={styles.modalimagecontainer}>
-                        <Image
-                          src={product.image}
-                          alt={product.name}
-                          className={styles.modalimage}
-                        />
-                      </div>
-                      <div className={styles.modalpricecontainer}>
-                        <p className={styles.modalname}>
-                          {lookupShortName(product.slug)}
-                        </p>
-                        <p className={styles.modalprice}>
-                          $ {splitPrice(product.price)}
-                        </p>
-                      </div>
-                      <div className={styles.modalquantitycontainer}>
-                        <p className={styles.modalquantity}>
-                          x {product.quantity}
-                        </p>
-                      </div>
+                  <div key={uuid()} className={styles.modalitem}>
+                    <div className={styles.modalimagecontainer}>
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        className={styles.modalimage}
+                      />
                     </div>
-                  ))}
+                    <div className={styles.modalpricecontainer}>
+                      <p className={styles.modalname}>
+                        {lookupShortName(product.slug)}
+                      </p>
+                      <p className={styles.modalprice}>
+                        $ {splitPrice(product.price)}
+                      </p>
+                    </div>
+                    <div className={styles.modalquantitycontainer}>
+                      <p className={styles.modalquantity}>
+                        x {product.quantity}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
             {otherItems}
