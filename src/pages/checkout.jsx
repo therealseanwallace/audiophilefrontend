@@ -51,7 +51,7 @@ const checkout = () => {
   let eMoneySection;
   if (paymentMethod === "emoney") {
     eMoneySection = (
-      <div>
+      <div className={styles.emoneysection}>
         <label className={styles.label} htmlFor="emoney-number">
           <p>e-Money Number</p>
           <input
@@ -84,12 +84,11 @@ const checkout = () => {
       </Head>
       <header>
         <Menu page="home" />
-        <GoBackLink referer={cartState.lastPageVisited} color="grey"/>
       </header>
       <main className={styles.main}>
+        <GoBackLink referer={cartState.lastPageVisited} color="orange" />
         <div className={styles.page}>
           <section className={styles.section}>
-            <div className={styles.spacer} />
             <form className={styles.form}>
               <h1 className={styles.h1}>Checkout</h1>
               <div className={styles.formcontainer}>

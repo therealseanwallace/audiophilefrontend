@@ -6,10 +6,6 @@
   background-color: var(--lighterGrey);
 }
 
-.spacer {
-  background-color: var(--lighterGrey);
-  height: 65px;
-}
 .section {
   display: flex;
   flex-direction: column;
@@ -53,7 +49,7 @@
 }
 
 .form {
-  width: 90vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,6 +87,9 @@
 .legend {
   margin-left: 5vw;
   margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: -0.21px;
 }
 
 .paymentmethodlabel {
@@ -337,4 +336,108 @@
   font-weight: bold;
   color: var(--white);
   font-size: 18px;
+}
+
+@media screen and (min-width: 767px) {
+  .formcontainer {
+    padding: 0 24px;
+  }
+  .formcontainer:first-of-type {
+    display: grid;
+
+  }
+
+  .formcontainer:first-of-type > h2 {
+    grid-area: 1 / 1 / 2 / 2;
+    margin-left: 18px;
+  }
+
+  .label > p {
+    margin-left: 20px;
+  }
+  .formcontainer:first-of-type > .label:first-of-type {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  .formcontainer:first-of-type > .label:nth-of-type(2) {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+
+  .formcontainer:first-of-type > .label:last-of-type {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+
+  .formcontainer:nth-of-type(2) {
+    display: grid;
+  }
+
+  .formcontainer:nth-of-type(2) > h2 {
+    grid-area: 1 / 1 / 2 / 2;
+    margin-left: 18px;
+  }
+  .formcontainer:nth-of-type(2) > .label:first-of-type {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  .formcontainer:nth-of-type(2) > .label:nth-of-type(2) {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .formcontainer:nth-of-type(2) > .label:nth-of-type(3) {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .formcontainer:nth-of-type(2) > .label:last-of-type {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+
+  .formcontainer:nth-of-type(3) > h2 {
+    margin-left: 20px;
+  }
+  .fieldset {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 0;
+  }
+  .legend {
+    margin-left: 20px;
+  }
+  .fieldset > h2 {
+    grid-area: 1 / 1 / 2 / 2;
+    height: 16px;
+
+  }
+
+  .fieldset > label:first-of-type {
+    margin-top: -64px;
+  }
+
+  .fieldset > label:last-of-type {
+    margin-top: -32px;
+  }
+  .fieldset > .legend {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  .fieldset > .paymentmethodlabel:first-of-type {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+
+  .fieldset > .paymentmethodlabel:last-of-type {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+
+  .emoneysection {
+    display: flex;
+  }
+
+  .emoneysection > * {
+    flex: 1 1 50%;
+  }
+
+  .paymentmethodlabel {
+    padding-left: 1vw;
+    margin-left: 2.35vw;
+  }
 }

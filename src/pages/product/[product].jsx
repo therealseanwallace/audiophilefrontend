@@ -21,7 +21,7 @@ const product = ({ data }) => (
       </Head>
       <header>
         <Menu page="nothome" />
-        <GoBackLink />
+        <GoBackLink color="grey"/>
       </header>
       <main>
         <ProductPageDetail data={data} />
