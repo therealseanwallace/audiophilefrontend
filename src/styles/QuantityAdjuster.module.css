@@ -23,3 +23,9 @@
   border: 0;
   background-color: transparent;
 }
+
+.plusminus:hover {
+  cursor: pointer;
+  opacity: 100%;
+  color: var(--darkOrange)
+}
