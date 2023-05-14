@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { CartContext } from "@/context/Context";
 import styles from "@/styles/GoBackLink.module.css";
 
-const GoBackLink = ({ referer, color }) => {
+const GoBackLink = ({ color }) => {
   const { cartState } = useContext(CartContext);
   if (color === "grey") {
     return (
@@ -26,6 +26,5 @@ const GoBackLink = ({ referer, color }) => {
 export default GoBackLink;
 
 GoBackLink.propTypes = {
-  referer: PropTypes.string.isRequired,
   color: PropTypes.string
 };
