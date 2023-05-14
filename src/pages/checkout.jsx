@@ -22,8 +22,8 @@ const checkout = () => {
   const toggleModal = () => {
     setModalIsOpen(!modalIsOpen);
   };
-  const vat2dp = cartState.total * (0.15).toFixed(2);
-  const vat = splitPrice(vat2dp);
+  const vat = cartState.total * 0.15;
+  const vatFormatted = splitPrice(vat);
   let otherItems;
   const numberOfOtherItems = cartState.cart.length - 1;
   if (numberOfOtherItems > 0) {
@@ -247,7 +247,7 @@ const checkout = () => {
                   </div>
                   <div className={styles.vatcontainer}>
                     <p className={styles.total}>VAT (Included)</p>
-                    <p className={styles.totalprice}>$ {vat}</p>
+                    <p className={styles.totalprice}>$ {vatFormatted}</p>
                   </div>
                   <br />
                   <div className={styles.grandtotalcontainer}>
