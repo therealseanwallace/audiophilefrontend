@@ -265,6 +265,7 @@ const checkout = () => {
             </div>
           </section>
           <Modal
+
             style={{
               overlay: { backgroundColor: "#00000080" },
               content: {
