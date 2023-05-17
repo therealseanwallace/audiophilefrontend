@@ -18,14 +18,31 @@
   color: var(--black);
   line-height: 25px;;
   font-size: 15px;
-  font-weight: medium;
+  font-weight: 600;
   text-decoration: none;
   margin-left: 10px;
   opacity: 50%;
 }
 
+.linkorange {
+  color: var(--darkOrange);
+  line-height: 25px;;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
 @media screen and (min-width: 1280px) {
   .container {
     margin: 0 0 0 110px;
+  }
+
+  .link {
+    margin-left: 0;
+  }
+
+  .linkorange {
+    margin-left: 0;
   }
 }
