@@ -8,16 +8,16 @@ const GoBackLink = ({ color }) => {
   const { cartState } = useContext(CartContext);
   if (color === "grey") {
     return (
-      <div className={styles.containergrey}>
-        <Link href={cartState.lastPageVisited}>
+      <div className={styles.container}>
+        <Link href={cartState.lastPageVisited} className={styles.link}>
           Go Back
         </Link>
       </div>
     );
   }
   return (
-    <div className={styles.container}>
-      <Link href={cartState.lastPageVisited} className={styles.link}>Go Back</Link>
+    <div className={styles.containergrey}>
+      <Link href={cartState.lastPageVisited} className={styles.linkorange}>Go Back</Link>
       
     </div>
   );

@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import GoBackLink from "@/components/GoBackLink";
 
 const product = ({ data }) => (
+<<<<<<< HEAD
   <>
     <header>
       <Menu page="nothome" />
@@ -25,6 +26,31 @@ const product = ({ data }) => (
     <Footer />
   </>
 );
+=======
+    <>
+      <Head>
+        <title>Audiophile</title>
+        <meta name="description" content="Audiophile" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <header>
+        <Menu page="nothome" />
+        <GoBackLink color="grey"/>
+      </header>
+      <main>
+        <ProductPageDetail data={data} />
+        <ProductGallery images={data.gallery} name={data.name} />
+        <MayAlsoLike others={data.others} />
+        <CategoryPictureLinks />
+        <BottomCopySection />
+      </main>
+      <Footer />
+    </>
+  );
+
+  
+>>>>>>> df82e0127c3e1d5b4a7011030073b0849b450208
 
 export default product;
 
