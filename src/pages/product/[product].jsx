@@ -1,4 +1,3 @@
-import Head from "next/head";
 import products from "@/data/data.js";
 import Menu from "@/components/Menu";
 import CategoryPictureLinks from "@/components/CategoryPictureLinks";
@@ -10,31 +9,22 @@ import MayAlsoLike from "@/components/MayAlsoLike";
 import Footer from "@/components/Footer";
 import GoBackLink from "@/components/GoBackLink";
 
-
 const product = ({ data }) => (
-    <>
-      <Head>
-        <title>Audiophile</title>
-        <meta name="description" content="Audiophile" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <header>
-        <Menu page="nothome" />
-        <GoBackLink />
-      </header>
-      <main>
-        <ProductPageDetail data={data} />
-        <ProductGallery images={data.gallery} name={data.name} />
-        <MayAlsoLike others={data.others} />
-        <CategoryPictureLinks />
-        <BottomCopySection />
-      </main>
-      <Footer />
-    </>
-  );
-
-  
+  <>
+    <header>
+      <Menu page="nothome" />
+      <GoBackLink />
+    </header>
+    <main>
+      <ProductPageDetail data={data} />
+      <ProductGallery images={data.gallery} name={data.name} />
+      <MayAlsoLike others={data.others} />
+      <CategoryPictureLinks />
+      <BottomCopySection />
+    </main>
+    <Footer />
+  </>
+);
 
 export default product;
 

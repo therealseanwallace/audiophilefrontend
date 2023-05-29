@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { useContext, useEffect, useCallback } from "react";
 import { CartContext } from "@/context/Context";
 import styles from "@/styles/Home.module.css";
@@ -21,12 +20,6 @@ export default function Home() {
   }, [updateLastPageVisited]);
   return (
     <>
-      <Head>
-        <title>Audiophile</title>
-        <meta name="description" content="Audiophile" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <header>
         <Menu page="home"/>
         <Hero />
